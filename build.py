@@ -8,7 +8,7 @@ def get_personal_data():
     # linkedin = "michael-niemeyer"
     bio_text = f"""
                 <p>
-                    Gi! I am a Ph.D. Student in the Computer Science Department at the <a href="https://www.technion.ac.il/" target="_blank">Technion</a> under the joint supervision of <a href="https://www.https://haggaim.github.io/" target="_blank">Haggai Maron</a> and href="https://csaws.cs.technion.ac.il/~rani/" target="_blank">Ran El-Yaniv</a>.
+                    Gi! I am a Ph.D. Student in the Computer Science Department at the <a href="https://www.technion.ac.il/" target="_blank">Technion</a> under the joint supervision of <a href="https://www.https://haggaim.github.io/" target="_blank">Haggai Maron</a> and href="https://csaws.cs.technion.ac.il/~rani/" target="_blank">Ran El-Yaniv</a>. My research interests include the application of deep learning techniques to mathematical objects characterized by inherent symmetry structures, with a focus on Graph Neural networks. Additionally, I am focused on estimating uncertainty within these deep learning models.
                     XXX
                     I am a research scientist at Google working on 3D computer vision and generative modeling.
                     Prior to joining Google, I was a PhD student at the <a href="https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/home/" target="_blank">Max Planck Insitute for Intelligent Systems</a> supervised by <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger</a>.
