@@ -103,7 +103,7 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
             string_part_i += name_part_i
         if string_part_i in links.keys():
             string_part_i = f'<a href="{links[string_part_i]}" target="_blank">{string_part_i}</a>'
-        if make_bold and string_part_i == make_bold_name:
+        if (make_bold and string_part_i == make_bold_name) or (make_bold and string_part_i == (make_bold_name + str("*"))):
             string_part_i = f'<span style="font-weight: bold";>{make_bold_name}</span>'
         if p != persons[-1]:
             string_part_i += connection
@@ -125,7 +125,7 @@ def get_paper_entry(entry_key, entry):
 
     # artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
     artefacts = {'pdf': 'Paper', 'supp': 'Supplemental',
-                 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
+                 'video': 'Video', 'poster': 'Poster', 'code': 'Code', 'poster': 'Poster', 'short_talk': 'Short talk'}
     i = 0
     for (k, v) in artefacts.items():
         if k in entry.fields.keys():
