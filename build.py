@@ -92,7 +92,7 @@ def get_author_dict():
         'Dominik Kaeser': 'https://scholar.google.com/citations?user=DQ4838YAAAAJ&hl=en',
         }
 
-def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Michael Niemeyer', add_links=True):
+def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Guy Bar-Shalom', add_links=True):
     links = get_author_dict() if add_links else {}
     s = ""
     for p in persons:
