@@ -222,7 +222,8 @@ def get_index_html():
                 </div>
                 <div class="row" style="margin-top: 1em;">
                     <div class="col-sm-12" style="">
-                        <h4>Publications</h4>
+                        <h4>Selected Publications</h4>
+                        <p> * indicates equal contribution</p>
                         {pub}
                     </div>
                 </div>
