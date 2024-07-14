@@ -18,7 +18,7 @@ def get_personal_data():
     # linkedin = "michael-niemeyer"
     bio_text = f"""
                 <p>
-                    Hi! I am a Ph.D. Student in the Computer Science Department at the <a href = "https://www.technion.ac.il/" target = "_blank" > Technion </a> under the joint supervision of <a href = "haggaim.github.io/" target = "_blank" > Haggai Maron </a> and <a href = "https://csaws.cs.technion.ac.il/~rani/" target = "_blank" > Ran El-Yaniv </a> . My research focuses on deep learning, with a specific interest in Graph Neural Networks and uncertainty estimation.
+                    Hi! I am a Ph.D. Student in the Computer Science Department at the <a href = "https://www.technion.ac.il/" target = "_blank" > Technion </a> under the joint supervision of <a href = "https://haggaim.github.io/" target = "_blank" > Haggai Maron </a> and <a href = "https://csaws.cs.technion.ac.il/~rani/" target = "_blank" > Ran El-Yaniv </a> . My research focuses on deep learning, with a specific interest in Graph Neural Networks and uncertainty estimation.
                 </p>
                 <p>Previously (Summer 2022), I was a Research Scientist Intern at <a href ="https://verily.com/" target="_blank">Google-Verily</a> working with <a href="https://elad.cs.technion.ac.il/" target="_blank">Michael Elad</a> on video analysis.</p>
                 <p>
