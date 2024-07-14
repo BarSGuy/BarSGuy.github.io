@@ -127,7 +127,7 @@ def get_paper_entry(entry_key, entry):
 
     # artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
     artefacts = {'pdf': 'Paper', 'supp': 'Supplemental',
-                 'video': 'Video', 'poster': 'Poster', 'code': 'Code', 'poster': 'Poster', 'short_talk': 'Short talk'}
+                 'video': 'Video', 'poster': 'Poster', 'code': 'Code', 'poster': 'Poster', 'short_talk': 'Short talk', 'slides': 'Slides'}
     i = 0
     for (k, v) in artefacts.items():
         if k in entry.fields.keys():
