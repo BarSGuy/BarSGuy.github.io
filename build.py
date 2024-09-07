@@ -25,7 +25,7 @@ def get_personal_data():
                     <a href="mailto:guybs99@gmail.com" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
                     <a href="https://scholar.google.com/citations?user=9Zvzm5MAAAAJ&hl=iw&oi=ao" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-book"></i> Scholar</a>
                     <a href="https://github.com/BarSGuy" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>
-                    <a href="https://m-niemeyer.github.io/assets/pdf/CF.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
+                    <a href="https://m-niemeyer.github.io/assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
                 </p>
     """
     footer = """
