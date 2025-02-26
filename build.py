@@ -22,7 +22,7 @@ def get_personal_data():
                 <p>
                     Hi! I am a Ph.D. Student in the Computer Science Department at the <a href = "https://www.technion.ac.il/" target = "_blank" > Technion </a> under the joint supervision of <a href = "https://haggaim.github.io/" target = "_blank" > Haggai Maron </a> and <a href = "https://csaws.cs.technion.ac.il/~rani/" target = "_blank" > Ran El-Yaniv </a> . My research focuses on deep learning, with a specific interest in Graph Neural Networks and uncertainty estimation.
                 </p>
-                <p>Previously (Summer 2022), I was a Research Scientist Intern at <a href ="https://verily.com/" target="_blank">Google-Verily</a> working with <a href="https://elad.cs.technion.ac.il/" target="_blank">Michael Elad</a> on video analysis.</p>
+                <p>Previously (Summer 2022), I was a Research Scientist Intern at <a href ="https://verily.com/" target="_blank">Google-Verily</a> working with <a href="https://elad.cs.technion.ac.il/" target="_blank">Michael Elad</a> on video analysis. In the summer of 2025, I will be joining Meta as a Research Intern.</p>
                 <p>
                     <a href="mailto:guybs99@gmail.com" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
                     <a href="https://scholar.google.com/citations?user=9Zvzm5MAAAAJ&hl=iw&oi=ao" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-book"></i> Scholar</a>
@@ -129,6 +129,8 @@ def get_paper_entry(entry_key, entry):
 
     s += f"""{generate_person_html(entry.persons['author'])} <br>"""
     s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
+
+    
 
     # artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
     artefacts = {'pdf': 'Paper', 'supp': 'Supplemental',
