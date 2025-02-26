@@ -1,3 +1,5 @@
+# NOTE: to add stuff modify only publications.bib
+
 from pybtex.database.input import bibtex
             #    <p >
             #         Hi! I am a Ph.D. Student in the Computer Science Department at the < a href = "https://www.technion.ac.il/" target = "_blank" > Technion < /a > under the joint supervision of < a href = "haggaim.github.io/" target = "_blank" > Haggai Maron < /a > and < a href = "https://csaws.cs.technion.ac.il/~rani/" target = "_blank" > Ran El-Yaniv < /a > . My research interests include the application of deep learning techniques to mathematical objects characterized by inherent symmetry structures, with a focus on Graph Neural networks. Additionally, I am focused on estimating uncertainty within these deep learning models.
