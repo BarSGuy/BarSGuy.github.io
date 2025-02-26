@@ -28,7 +28,7 @@ def get_personal_data():
                     <a href="https://x.com/GuyBarSh" target="_blank" style="margin-right: 5px"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
                     <a href="https://www.linkedin.com/in/guy-bar-shalom-a4b925130" target="_blank" style="margin-right: 5px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
                     <a href="https://BarSGuy.github.io/assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
-                </p>
+                </p> 
     """
     footer = """
             <div class="col-sm-12" style="">
