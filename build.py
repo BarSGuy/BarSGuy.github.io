@@ -29,7 +29,7 @@ def get_personal_data():
                     <a href="https://github.com/BarSGuy" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>
                     <a href="https://x.com/GuyBarSh" target="_blank" style="margin-right: 5px"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
                     <a href="https://www.linkedin.com/in/guy-bar-shalom-a4b925130" target="_blank" style="margin-right: 5px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
-                    <a href="assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
+                    <a href="assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV (updated Feb. 2026)</a>
                 </p> 
     """
     footer = """
