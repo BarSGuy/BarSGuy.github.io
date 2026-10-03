@@ -20,16 +20,16 @@ def get_personal_data():
     # linkedin = "michael-niemeyer"
     bio_text = f"""
                 <p>
-                    Hi! I am a Ph.D. Student in the Computer Science Department at the <a href = "https://www.technion.ac.il/" target = "_blank" > Technion </a> under the joint supervision of <a href = "https://haggaim.github.io/" target = "_blank" > Haggai Maron </a> and <a href = "https://csaws.cs.technion.ac.il/~rani/" target = "_blank" > Ran El-Yaniv </a> . My research focuses on Geometric Deep Learning, leveraging data symmetries to enhance model learning. I explore applications in Graph Neural Networks and uncertainty estimation in both vision models and Large Language Models.
+                    Hi! I am a Postdoctoral Researcher in the Computer Science Department at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>, hosted by <a href="https://yoavartzi.com/" target="_blank">Yoav Artzi</a>. I completed my Ph.D. in the Computer Science Department at the <a href="https://www.technion.ac.il/" target="_blank">Technion</a> under the joint supervision of <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a> and <a href="https://csaws.cs.technion.ac.il/~rani/" target="_blank">Ran El-Yaniv</a>. My research aims to make LLMs safer by detecting their misbehaviors, such as hallucinations, using structure-aware deep learning models that learn directly from their internals. I am also interested in weight-space learning, where neural networks process other neural networks. I have also worked on Geometric Deep Learning, leveraging data symmetries to build better models, with applications to Graph Neural Networks.
                 </p>
-                <p>Previously (Summer 2022), I was a research scientist intern at <a href ="https://verily.com/" target="_blank">Google-Verily</a> working with <a href="https://elad.cs.technion.ac.il/" target="_blank">Michael Elad</a> on video analysis. In the summer of 2025, I was a research scientist intern at Meta.</p>
+                <p>Previously (Summer 2022), I was a research scientist intern at <a href ="https://verily.com/" target="_blank">Google-Verily</a> working with <a href="https://elad.cs.technion.ac.il/" target="_blank">Michael Elad</a> on video analysis. In the summer of 2025, I was a research scientist intern at <a href="https://www.meta.com/" target="_blank">Meta</a>.</p>
                 <p>
                     <a href="mailto:guybs99@gmail.com" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
                     <a href="https://scholar.google.com/citations?user=9Zvzm5MAAAAJ&hl=iw&oi=ao" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-book"></i> Scholar</a>
                     <a href="https://github.com/BarSGuy" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>
                     <a href="https://x.com/GuyBarSh" target="_blank" style="margin-right: 5px"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
                     <a href="https://www.linkedin.com/in/guy-bar-shalom-a4b925130" target="_blank" style="margin-right: 5px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
-                    <a href="assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV (updated Feb. 2026)</a>
+                    <a href="assets/pdf/CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV (updated Aug. 2026)</a>
                 </p> 
     """
     footer = """
@@ -40,6 +40,17 @@ def get_personal_data():
             </div>
     """
     return name, bio_text, footer
+
+def get_news_list():
+    # Newest first. Each item is (date, html_text), e.g.
+    # ('Oct 2026', 'New blog post: <a href="..." target="_blank">Title</a>'),
+    return [
+        ('2026', 'Awarded the PBC Postdoctoral Fellowship in Artificial Intelligence and Data Science.'),
+        ('2026', 'Awarded the Empire AI Postdoctoral Fellowship, Cornell University.'),
+        ('2026', 'Awarded the Viterbi Postdoctoral Fellowship for Nurturing Future Faculty Members.'),
+        ('2026', 'Received the KLA Research Excellence Award, Faculty of Computer Science, Technion.'),
+        ('2026', 'Check out our new blog post, <a href="https://ffabffrasca.substack.com/p/detecting-llm-misbehaviors-from-the" target="_blank">Detecting LLM Misbehaviors from the Inside Out with Deep Learning on Structured Data</a>.'),
+    ]
 
 def get_author_dict():
     return {
@@ -192,7 +203,25 @@ def get_talks_html():
         s+= get_talk_entry(k, bib_data.entries[k])
     return s
 
+def get_news_item(date, text):
+    return f"""<li style="margin-bottom: 0.4em;"><span style="font-weight: bold; display: inline-block; min-width: 6.5em;">{date}</span> {text}</li>"""
+
+def get_news_html(num_visible=5):
+    news = get_news_list()
+    if not news:
+        return """<p style="color: gray; font-style: italic;">No news yet.</p>"""
+    s = """<ul class="list-unstyled">"""
+    s += "".join(get_news_item(d, t) for (d, t) in news[:num_visible])
+    s += """</ul>"""
+    if len(news) > num_visible:
+        s += """<div class="collapse" id="collapseNews"><ul class="list-unstyled">"""
+        s += "".join(get_news_item(d, t) for (d, t) in news[num_visible:])
+        s += """</ul></div>"""
+        s += """<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNews" aria-expanded="false" aria-controls="collapseNews" style="padding: 0;">Show older news</button>"""
+    return s
+
 def get_index_html():
+    news = get_news_html()
     pub = get_publications_html()
     talks = get_talks_html()
     name, bio_text, footer = get_personal_data()
@@ -229,6 +258,12 @@ def get_index_html():
                     </div>
                     <div class="col-md-2" style="">
                         <img src="assets/img/profile.jpg" class="img-thumbnail" width="280px" alt="Profile picture">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <div class="col-sm-12" style="">
+                        <h4>News</h4>
+                        {news}
                     </div>
                 </div>
                 <div class="row" style="margin-top: 1em;">
