@@ -45,11 +45,12 @@ def get_news_list():
     # Newest first. Each item is (date, html_text), e.g.
     # ('Oct 2026', 'New blog post: <a href="..." target="_blank">Title</a>'),
     return [
+        ('2026', '<a href="https://www.technion.ac.il/en/blog/article/technion-researchers-develop-an-innovative-approach-for-identifying-limitations-and-hallucinations-in-artificial-intelligence-models/" target="_blank">Technion article on our work on monitoring LLMs for misbehaviors</a>.'),
         ('2026', 'Awarded the PBC Postdoctoral Fellowship in Artificial Intelligence and Data Science.'),
         ('2026', 'Awarded the Empire AI Postdoctoral Fellowship, Cornell University.'),
         ('2026', 'Awarded the Viterbi Postdoctoral Fellowship for Nurturing Future Faculty Members.'),
-        ('2026', 'Received the KLA Research Excellence Award, Faculty of Computer Science, Technion.'),
         ('2026', 'Check out our new blog post, <a href="https://ffabffrasca.substack.com/p/detecting-llm-misbehaviors-from-the" target="_blank">Detecting LLM Misbehaviors from the Inside Out with Deep Learning on Structured Data</a>.'),
+        ('2026', 'Received the KLA Research Excellence Award, Faculty of Computer Science, Technion.'),
     ]
 
 def get_author_dict():
@@ -144,7 +145,7 @@ def get_paper_entry(entry_key, entry):
     
 
     # artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
-    artefacts = {'pdf': 'Paper', 'supp': 'Supplemental',
+    artefacts = {'project_page': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental',
                  'video': 'Video', 'poster': 'Poster', 'code': 'Code', 'poster': 'Poster', 'short_talk': 'Short talk', 'slides': 'Slides', 'errata': 'Errata'}
     i = 0
     for (k, v) in artefacts.items():
